@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+
+<ui:composition template="/templates/modeloGeral.xhtml">
+	<ui:define name="metadata">
+		<f:event listener="#{fabricanteBean.carregarPesquisa}"
+			type="preRenderView">
+		</f:event>
+	</ui:define>
+	<ui:define name="conteudo">
+
+		<h:form>
+			<p:toolbar>
+				<f:facet name="left">
+					<h:outputText value="Fabricantes" />
+				</f:facet>
+			</p:toolbar>
+
+
+			<p:dataTable emptyMessage="Nenhum registro encontrado."
+				value="#{fabricanteBean.listaFabricantes}"
+				filteredValue="#{fabricanteBean.listaFabricantesFiltrados}"
+				var="fabricante" rows="10" paginator="true">
+
+				<p:column headerText="Codigo">
+					<h:outputText value="#{fabricante.codigo}" />
+				</p:column>
+
+				<p:column headerText="Descrição" filterBy="#{fabricante.descricao}"
+					sortBy="#{fabricante.descricao}">
+					<h:outputText value="#{fabricante.descricao}" />
+				</p:column>
+				<p:column headerText="Opções">
+					<p:button value="Editar"
+						outcome="/pages/fabricanteCadastro.xhtml?faces-redirect=true">
+						<f:param name="fabCod" value="#{fabricante.codigo}">
+						</f:param>
+						<f:param name="fabacao" value="editar"></f:param>
+					</p:button>
+					<p:button value="Excluir"
+						outcome="/pages/fabricanteCadastro.xhtml?faces-redirect=true">
+						<f:param name="fabCod" value="#{fabricante.codigo}">
+						</f:param>
+						<f:param name="fabacao" value="excluir"></f:param>
+					</p:button>
+				</p:column>
+
+				<f:facet name="footer">
+					<p:button value="Novo"
+						outcome="/pages/fabricanteCadastro.xhtml?faces-redirect=true">
+						<f:param name="fabacao" value="novo"></f:param>
+					</p:button>
+				</f:facet>
+			</p:dataTable>
+		</h:form>
+	</ui:define>
+</ui:composition>
+
+</html>
