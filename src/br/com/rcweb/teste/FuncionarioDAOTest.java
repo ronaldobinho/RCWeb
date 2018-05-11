@@ -1,7 +1,5 @@
 package br.com.rcweb.teste;
 
-import java.util.List;
-
 import org.junit.Ignore;
 import org.junit.Test;
 

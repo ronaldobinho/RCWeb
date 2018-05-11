@@ -1,7 +1,5 @@
 package br.com.rcweb.util;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
   // Classe ouvinte, esse classe tem como função inciar junto com o servidor Tomcat
 public class ContextListener implements ServletContextListener{
     

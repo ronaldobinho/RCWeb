@@ -1,10 +1,10 @@
 package br.com.rcweb.util;
 
-import java.util.Map;
-
 import javax.faces.application.FacesMessage;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
+
+import org.hibernate.mapping.Map;
 
 public class FacesUtil {
 	public static void addMsgInfo(String mensagem) {

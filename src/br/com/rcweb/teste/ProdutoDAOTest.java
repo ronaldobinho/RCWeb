@@ -1,8 +1,5 @@
 package br.com.rcweb.teste;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 import org.junit.Ignore;
 import org.junit.Test;
 

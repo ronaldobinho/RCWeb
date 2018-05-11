@@ -1,17 +1,11 @@
 package br.com.rcweb.teste;
 
-import java.math.BigDecimal;
-import java.util.Calendar;
-import java.util.List;
-
 import org.junit.Ignore;
 import org.junit.Test;
 
-import br.com.rcweb.dao.FuncionarioDAO;
 import br.com.rcweb.dao.ItemDAO;
 import br.com.rcweb.dao.ProdutoDAO;
 import br.com.rcweb.dao.VendaDAO;
-import br.com.rcweb.domain.Funcionario;
 import br.com.rcweb.domain.Item;
 import br.com.rcweb.domain.Produto;
 import br.com.rcweb.domain.Venda;

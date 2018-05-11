@@ -1,12 +1,10 @@
 package br.com.rcweb.teste;
 
-import java.util.List;
-
+import org.junit.Ignore;
 import org.junit.Test;
 
 import br.com.rcweb.dao.FabricanteDAO;
 import br.com.rcweb.domain.Fabricante;
-import jdk.nashorn.internal.ir.annotations.Ignore;
 
 public class FabricanteDAOTest {
 	
